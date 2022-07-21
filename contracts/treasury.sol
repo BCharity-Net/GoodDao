@@ -98,9 +98,9 @@ contract Treasury is
     function validatePayout() external{
         uint256 balance = IERC20Upgradeable(good).balanceOf(address(this));
         uint256[] memory getGoodAmountOneETH = IUniswapV2Router(router).getAmountsOut(totalETH, path);
-        uint256 totalAmount = getGoodAmountOneETH[1].mul(155).div(10);
+        uint256 totalAmount = getGoodAmountOneETH[1].mul(6);
         if(balance >= totalAmount && IGovernance(dao).nextInvesteeFund()<IGovernance(dao).nextInvestee()){
-            fundInvestee(totalAmount,getGoodAmountOneETH[1].mul(25).div(10));
+            fundInvestee(totalAmount,getGoodAmountOneETH[1]);
         }
     }
 

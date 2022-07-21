@@ -5,7 +5,9 @@ async function main() {
   const [deployer] = await ethers.getSigners();
   console.log("Deployer address", deployer.address);
 
-  const RouterAddress = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
+  // const RouterAddress = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"; --- eth
+  // const RouterAddress = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"; --- mumbai
+  const RouterAddress = "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff";
   const Token = await ethers.getContractFactory("Good");
   const governanceToken = await ethers.getContractFactory(
     "GovernorBravoDelegate"
@@ -72,3 +74,18 @@ main();
 // Treasury Token  0x504b98A3720cc564874dce0d551EB1d372e7095b
 // Timelock Token  0x7efeDA9865d65BFfd6CA3C5232743cb5553c6947
 // Governance Token  0xB802d50E31D4A234b1518aC16c3d0335689A5608
+
+// Mumbai --- deployed:
+// Deployer address 0x7cE76D95B5BE54D3c1D2b40C1c37C4A8913bD4b5
+// Good Token  0x7012C6cA8D08faEcA22ab9931F8A60a7eEa53A47
+// iGive Token  0xDA09167F472B5fe816a7eA4F40A0e3C2d0A07Eb2
+// Treasury Token  0x2d5980472537C61F03Db4C6D2Ed9de2cC1f43d45
+// Timelock Token  0x466ddCEaeE2A7040894ea56615b765739E555b38
+// Governance Token  0x1136bF7654F3F4D4026F6c3a13a394823C87A4eF
+
+// Mumbai --- deployed: (new 1/6 treasury.sol)
+// Good Token  0xEe4d8767C16f2E4826b414f1D06f40a5dBE6c42e
+// iGive Token  0x493e6BDfd1934939366D1BF976F2fb4d2dd39d50
+// Treasury Token  0x1Cd1D6E8B55c10a502E69349cB63c6EAa7fed614
+// Timelock Token  0x4FB4049013d6AC62744BDc04164BCeF0D643c025
+// Governance Token  0xe3c226D6CCe23D926db4038445fF68c04ad1aE8f
