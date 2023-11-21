@@ -64,8 +64,8 @@ module.exports = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       timeout: 0
     },
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+    polygon: {
+      url: process.env.POLYGON_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       timeout: 0
